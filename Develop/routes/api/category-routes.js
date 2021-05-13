@@ -1,8 +1,7 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
 
-// The `/api/categories` endpoint
-// works 
+// Endpoints for API/Categories
 router.get('/', async (req, res) => {
   // find all categories
   console.log("Get route")
@@ -23,7 +22,6 @@ router.get('/', async (req, res) => {
   // be sure to include its associated Products
 });
 
-// works 
 router.get('/:id', (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
@@ -43,7 +41,7 @@ router.get('/:id', (req, res) => {
   });
 });
 
-// changed title to category_name
+
 router.post('/', (req, res) => {
   // create a new category
   Category.create({
@@ -56,7 +54,7 @@ router.post('/', (req, res) => {
 });
 });
 
-// nope
+// This file doesn't work
 router.put('/:id', (req, res) => {
   // update a category by its `id` value
   Category.update(
@@ -75,7 +73,7 @@ router.put('/:id', (req, res) => {
 });
 });
 
-// works
+// This is the working file
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
   Category.destroy({
@@ -85,7 +83,7 @@ router.delete('/:id', (req, res) => {
 })
 .then(categoryData => {
   if (!categoryData) {
-    res.status(404).json({ message: 'No category with specified ID'});
+    res.status(404).json({ message: 'No category with input ID'});
     return;
   }
   res.json(categoryData)
