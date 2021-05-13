@@ -46,7 +46,7 @@ Product.findUNO({
   .catch(err => {
     res.status(500).json(err)
   })
-});
+
 // create new product
 router.post('/', (req, res) => {
   /* req.body should look like this...
