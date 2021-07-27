@@ -13,10 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/mirrorlessmind/retail.git"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.3,
-  "license": "MIT"
-  },
   "dependencies": {
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
