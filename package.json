@@ -13,11 +13,9 @@
     "type": "git",
     "url": "git+https://github.com/mirrorlessmind/retail.git"
   },
-  "author": "Cigi Tipton",
   "devDependencies": {
     "nodemon": "^2.0.3,
-  "license": "MIT",
- 
+  "license": "MIT"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
